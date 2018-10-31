@@ -1,0 +1,841 @@
+<!--
+/**
+ * Visualforce Component - Styling override.
+ * <p /><p />
+ * @author Raymundo Rodríguez
+ */
+-->
+<apex:component >
+    <apex:stylesheet value="{!URLFOR($Resource.FrameworkBase_CF, 'css/awesome-bootstrap-checkbox.css')}" />
+    <style>
+
+        /*Background colors*/
+        .backgroundWhite_MC {
+            background-color: #FFFFFF !important;
+        }
+        .backgroundBlack_MC {
+            background-color: #000000 !important;
+        }
+        .backgroundDarkGray_MC {
+            background-color: #53565A !important;
+        }
+        .backgroundLightGray_MC {
+            background-color: #D9D9D6 !important;
+        }
+        .backgroundDijonMustardMuted_MC {
+            background-color: #BD9B60 !important;
+        }
+        .backgroundEastRiverMuted_MC {
+            background-color: #007398 !important;
+        }
+        .backgroundLoxMuted_MC {
+            background-color: #E8927C !important;
+        }
+        .backgroundCentralParkMuted_MC {
+            background-color: #006C5B !important;
+        }
+        .backgroundEmpireMuted_MC {
+            background-color: #688197 !important;
+        }
+        .backgroundSpicyMustardBalanced_MC {
+            background-color: #CBA052 !important;
+        }
+        .backgroundHudsonBalanced_MC {
+            background-color: #0092BD !important;
+        }
+        .backgroundSalamiBalanced_MC {
+            background-color: #DD7975 !important;
+        }
+        .backgroundCoronaParkBalanced_MC {
+            background-color: #279989 !important;
+        }
+        .backgroundLeverBalanced_MC {
+            background-color: #7A99AC !important;
+        }
+        .backgroundConeyIslandMustardVibrant_MC {
+            background-color: #E0A526 !important;
+        }
+        .backgroundTheLakeVibrant_MC {
+            background-color: #489FDF !important;
+        }
+        .backgroundPastramiVibrant_MC {
+            background-color: #E5554F !important;
+        }
+        .backgroundProspectParkVibrant_MC {
+            background-color: #40C1AC !important;
+        }
+        .backgroundChryslerVibrant_MC {
+            background-color: #9BB8D3 !important;
+        }
+        .backgroundLangonePurple_MC {
+            background-color: #005fb2 !important;
+        }
+        .backgroundLangonePurpleTint100_MC {
+            background-color: #0070d2 !important;
+        }
+        .backgroundLangonePurpleTint90_MC {
+            background-color: #007add !important;
+        }
+        .backgroundLangonePurpleTint80_MC {
+            background-color: #1589ee !important;
+        }
+        .backgroundLangonePurpleTint70_MC {
+            background-color: #253045 !important;
+        }
+        .backgroundLangonePurpleTint60_MC {
+            background-color: #182337 !important;
+        }
+
+        /*Colors*/
+        .colorWhite_MC {
+            color: #FFFFFF !important;
+         }
+        .colorBlack_MC {
+            color: #000000 !important;
+        }
+        .colorDarkGray_MC {
+            color: #53565A !important;
+        }
+        .colorLightGray_MC {
+            color: #D9D9D6 !important;
+        }
+        .colorDijonMustardMuted_MC {
+            color: #BD9B60 !important;
+        }
+        .colorEastRiverMuted_MC {
+            color: #007398 !important;
+        }
+        .colorLoxMuted_MC {
+            color: #E8927C !important;
+        }
+        .colorCentralParkMuted_MC {
+            color: #006C5B !important;
+        }
+        .colorEmpireMuted_MC {
+            color: #688197 !important;
+        }
+        .colorSpicyMustardBalanced_MC {
+            color: #CBA052 !important;
+        }
+        .colorHudsonBalanced_MC {
+            color: #0092BD !important;
+        }
+        .colorSalamiBalanced_MC {
+            color: #DD7975 !important;
+        }
+        .colorCoronaParkBalanced_MC {
+            color: #279989 !important;
+        }
+        .colorLeverBalanced_MC {
+            color: #7A99AC !important;
+        }
+        .colorConeyIslandMustardVibrant_MC {
+            color: #E0A526 !important;
+        }
+        .colorTheLakeVibrant_MC {
+            color: #489FDF !important;
+        }
+        .colorPastramiVibrant_MC {
+            color: #E5554F !important;
+        }
+        .colorProspectParkVibrant_MC {
+            color: #40C1AC !important;
+        }
+        .colorChryslerVibrant_MC {
+            color: #9BB8D3 !important;
+        }
+        .colorLangonePurple_MC {
+            color: #005fb2 !important;
+        }
+
+        /*Borders*/
+        .borderWhite_MC {
+            border-color: #FFFFFF !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderBlack_MC {
+            border-color: #000000 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderDarkGray_MC {
+            border-color: #53565A !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderLightGray_MC {
+            border-color: #D9D9D6 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderDijonMustardMuted_MC {
+            border-color: #BD9B60 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderEastRiverMuted_MC {
+            border-color: #007398 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderLoxMuted_MC {
+            border-color: #E8927C !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderCentralParkMuted_MC {
+            border-color: #006C5B !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderEmpireMuted_MC {
+            border-color: #688197 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderSpicyMustardBalanced_MC {
+            border-color: #CBA052 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderHudsonBalanced_MC {
+            border-color: #0092BD !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderSalamiBalanced_MC {
+            border-color: #DD7975 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderCoronaParkBalanced_MC {
+            border-color: #279989 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderLeverBalanced_MC {
+            border-color: #7A99AC !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderConeyIslandMustardVibrant_MC {
+            border-color: #E0A526 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderTheLakeVibrant_MC {
+            border-color: #489FDF !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderPastramiVibrant_MC {
+            border-color: #E5554F !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderProspectParkVibrant_MC {
+            border-color: #40C1AC !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderChryslerVibrant_MC {
+            border-color: #9BB8D3 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        .borderLangonePurple_MC {
+            border-color: #005fb2 !important;
+            border-style: solid;
+            border-width: 2px;
+        }
+        
+        /*Member Connect Symbols*/
+        .triangleDownLangonePurple_MC {
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #005fb2;
+        }
+        
+        .panelLangonePurple_MC {
+            padding: 10px;
+            border: 1px solid #005fb2;
+            border-radius: 4px;
+        }
+        
+        /*Custom Framework Override*/
+        /* General styling*/
+        body {
+            background-color: #FFFFFF !important;
+        }
+
+        h1, h2, h3, h4, h5, h6, h7, h8, th, th > div, label {
+            color: #005fb2 !important;
+        }
+
+        /* Data Tables */
+        .dataTable td, .dataTable th {
+            padding: 8px;
+        }
+        .dataTable thead th{
+            background-color: #489FDF !important;
+            color: #FFFFFF !important;
+        }
+         .dataTable tbody td {
+            border-top: 1px solid #dddddd;
+        }
+
+        /* Data Tables - On Hover */
+        .dataTable tbody tr:hover > td {
+            box-shadow: #D8DDE6 0 -1px 0 inset;
+            background-color: #F4F6F9;
+        }
+        .dataTable thead th:hover {
+            background-color: #0092BD !important;
+        }
+        .dataTable tbody td:hover {
+            background-color: #D8DDE6 !important;
+        }
+        
+         /*Custom data table styles*/
+        .dataTable-custom thead th:hover {
+            background-color: #96c8f4 !important;
+        }
+        .dataTable-custom thead th {
+            color: #FFF !important;
+        }
+        .dataTable-custom tbody td {
+            border-top: 1px solid #dddddd;
+        }
+        .dataTable-custom tbody td:hover {
+            background-color: #D8DDE6 !important;
+        }
+        .dataTable-custom {
+            width: 100% !important;
+        }
+
+        /* Input fields*/
+        .form-control {
+            background-color: white;
+            color: #000000;
+            border: 1px solid #d8dde6;
+            border-radius: 0.25rem;
+            width: 100%;
+            -webkit-transition: border 0.1s linear,background-color 0.1s linear;
+            transition: border 0.1s linear,background-color 0.1s linear;
+            display: inline-block;
+            padding: 0 1rem 0 0.75rem;
+            line-height: 2.125rem;
+            min-height: calc(2.125rem + 2px);
+        }
+
+        /* Labels for input fields*/
+        label {
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+
+        /* Updating background color for error messages*/
+        .alert-danger {
+            background-color: #E5554F;
+        }
+
+        /* Updating background color for warning messages*/
+        .alert-warning {
+            background-color: #E0A526;
+        }
+
+        /* Updating background color for info messages*/
+        .alert-info {
+            background-color: #9BB8D3;
+        }
+
+        /* Updating background color for success messages*/
+        .alert-success {
+            background-color: #40C1AC;
+        }
+
+        /* Updating font color*/
+        .alert-link {
+            color: #FFFFFF !important;
+            cursor: default !important;
+            text-decoration: none !important;
+            display: block;
+            font-size: 11px !important;
+        }
+
+        /* Autocomplete general style*/
+        .ui-autocomplete .ui-menu-item {
+            background-color: white;
+            color: #000000;
+            border: none !important;
+            width: 100%;
+            -webkit-transition: border 0.1s linear,background-color 0.1s linear;
+            transition: border 0.1s linear,background-color 0.1s linear;
+            padding: 0px !important;
+            line-height: 2.125rem;
+            min-height: calc(2.125rem + 2px);
+            font-weight: normal !important;
+        }
+
+        /* Autocomplete onFocus style*/
+        .ui-autocomplete .ui-state-focus {
+            background: none !important;
+            border-radius: 0.25rem !important;
+            font-weight: light !important;
+            color: white  !important;
+
+        }
+        .ui-menu > .ui-menu-item > a {
+            display: block !important;
+            font-size: 12.5px  !important;
+            width: 100% !important;
+        }
+        .ui-widget-content a {
+            color: #000000 !important;
+            display: block !important;
+            width: 100% !important;
+        }
+        .ui-widget-content a:hover {
+            color: #000000 !important;
+        }
+        .ui-menu-item > .ui-state-active {
+            background: none !important;
+            background-color: #9BB8D3 !important;
+            border: 0px !important;
+            font-size: 12.5px  !important;
+            color: #006cb5 !important;
+        }
+
+        /* USEFUL CLASSES*/
+        /* Class to be applied to Div elements to divide content*/
+        .customDivider {
+            margin-left: 0.5px;
+            margin-right: 0.5px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-top-color: #005fb2;
+            border-top-width: 1px;
+            border-top-style: solid;
+        }
+
+        /* Class to be applied to Div elements to divide content with dots*/
+        .customDivider-dots {
+            margin-left: 0.5px;
+            margin-right: 0.5px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-top-color: #005fb2;
+            border-top-width: 1px;
+            border-top-style: dotted;
+        }
+
+        /* Class to be applied to Div elements to divide content with dashes*/
+        .customDivider-dashes {
+            margin-left: 0.5px;
+            margin-right: 0.5px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-top-color: #005fb2;
+            border-top-width: 1px;
+            border-top-style: dashed;
+        }
+
+        /* Autocomplete spinner*/
+        .ui-autocomplete-loading {
+            background: white url(../images/slds_spinner_brand.gif) right center no-repeat;
+            background-size:20px 20px;
+        }
+
+        /* Multiselect picklist - selected value*/
+        .multiselect-container > li.active > a > label {
+            color: white !important;
+            background-color: #0070D2 !important;
+        }
+
+        /*Placeholder format from input file component*/
+        file-caption-name {
+            font-weight: italic;
+        }
+
+        /*Buttons in Lightning SFDC style*/
+        /*Button for Default type. (Grey Styling)*/
+        .btn-default {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #fff !important;
+            border: 1px solid #d8dde6 !important;
+            color: #005fb2;
+            background-image: -webkit-linear-gradient(top, #fff 0, #fff 100%);
+            background-image: -o-linear-gradient(top, #fff 0, #fff 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff, to(#fff)));
+            background-image: linear-gradient(to bottom, #fff 0, #fff 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr=#fff, GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+        }
+
+        /*Button for Default type. (Grey Styling for hover state)*/
+        .btn-default:hover {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #eef1f6  !important;
+            border: 1px solid #d8dde6 !important;
+            color: #00396b !important;
+            background-image: -webkit-linear-gradient(top, #eef1f6  0, #eef1f6  100%);
+            background-image: -o-linear-gradient(top, #eef1f6  0, #eef1f6  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eef1f6 , to(#eef1f6 )));
+            background-image: linear-gradient(to bottom, #eef1f6  0, #eef1f6  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eef1f6', endColorstr='eef1f6', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #0070d2;
+        }
+
+        /*Button for Primary type. (Bright blue Styling)*/
+        .btn-primary {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #489FDF  !important;
+            border: 1px solid #489FDF !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #489FDF  0, #489FDF  100%);
+            background-image: -o-linear-gradient(top, #489FDF  0, #489FDF  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #489FDF , to(#489FDF )));
+            background-image: linear-gradient(to bottom, #489FDF  0, #489FDF  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#489FDF', endColorstr='#489FDF', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #489FDF;
+        }
+
+        /*Button for Primary type. (Bright blue Styling for hover state)*/
+        .btn-primary:hover {
+            background-color: #0092BD  !important;
+            border: 1px solid #0092BD !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #0092BD  0, #0092BD 100%);
+            background-image: -o-linear-gradient(top, #0092BD  0, #0092BD  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0092BD , to(#0092BD)));
+            background-image: linear-gradient(to bottom, #0092BD  0, #0092BD 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0092BD', endColorstr='#0092BD', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #0092BD;
+        }
+
+        /*Button for Success type. (Green Styling)*/
+        .btn-success {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #40C1AC  !important;
+            border: 1px solid #40C1AC !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #40C1AC  0, #40C1AC  100%);
+            background-image: -o-linear-gradient(top, #40C1AC  0, #40C1AC  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #40C1AC , to(#40C1AC)));
+            background-image: linear-gradient(to bottom, #40C1AC  0, #40C1AC  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#40C1AC', endColorstr='#40C1AC', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #40C1AC;
+        }
+
+        /*Button for Success type. (Green Styling for hover state)*/
+        .btn-success:hover {
+            background-color: #279989  !important;
+            border: 1px solid #279989 !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #279989  0, #279989  100%);
+            background-image: -o-linear-gradient(top, #279989  0, #279989  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #279989 , to(#279989)));
+            background-image: linear-gradient(to bottom, #279989  0, #279989  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#279989', endColorstr='#279989', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #279989;
+        }
+
+        /*Button for Warning type. (Yellow Styling)*/
+        .btn-warning {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #E0A526  !important;
+            border: 1px solid #E0A526 !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #E0A526  0, #E0A526  100%);
+            background-image: -o-linear-gradient(top, #E0A526  0, #E0A526  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E0A526 , to(#E0A526)));
+            background-image: linear-gradient(to bottom, #E0A526  0, #E0A526  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E0A526', endColorstr='#E0A526', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #E0A526;
+        }
+
+        /*Button for Warning type. (Yellow Styling for hover state)*/
+        .btn-warning:hover {
+            background-color: #CBA052 !important;
+            border: 1px solid #CBA052 !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #CBA052  0, #CBA052  100%);
+            background-image: -o-linear-gradient(top, #CBA052  0, #CBA052  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #CBA052 , to(#CBA052)));
+            background-image: linear-gradient(to bottom, #CBA052  0, #CBA052  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#CBA052', endColorstr='#CBA052', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #CBA052;
+        }
+
+        /*Button for Danger type. (Red Styling)*/
+        .btn-danger {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #E5554F  !important;
+            border: 1px solid #E5554F !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #E5554F  0, #E5554F  100%);
+            background-image: -o-linear-gradient(top, #E5554F  0, #E5554F  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E5554F , to(#E5554F)));
+            background-image: linear-gradient(to bottom, #E5554F  0, #E5554F  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E5554F', endColorstr='#E5554F', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #E5554F;
+        }
+
+        /*Button for Danger type. (Red Styling for hover state)*/
+        .btn-danger:hover {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #DD7975  !important;
+            border: 1px solid #DD7975 !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #DD7975  0, #DD7975  100%);
+            background-image: -o-linear-gradient(top, #DD7975  0, #DD7975  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #DD7975 , to(#DD7975)));
+            background-image: linear-gradient(to bottom, #DD7975  0, #DD7975  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DD7975', endColorstr='#DD7975', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #DD7975;
+        }
+
+        /*Button for Info type. (Blue Styling)*/
+        .btn-info {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #9BB8D3  !important;
+            border: 1px solid #9BB8D3 !important;
+            color: #white !important;
+            background-image: -webkit-linear-gradient(top, #9BB8D3  0, #9BB8D3  100%);
+            background-image: -o-linear-gradient(top, #9BB8D3  0, #9BB8D3  100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #9BB8D3 , to(#9BB8D3)));
+            background-image: linear-gradient(to bottom, #9BB8D3  0, #9BB8D3  100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='9BB8D3', endColorstr='#9BB8D3', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+            background-repeat: repeat-x;
+            border-color: #9BB8D3;
+        }
+
+        /*Button for Info type. (Blue Styling for hover state)*/
+        .btn-info:hover {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            text
+        }
+
+        /*General Style*/
+        .btn {
+            font-size: 12px !important;
+        }
+        a {
+            font-size: 12px !important;
+        }
+        td {
+            font-size: 12px !important;
+        }
+        th {
+            font-size: 12px !important;
+        }
+
+        /*Badges in Lightning SFDC style*/
+        /*Default grey type styling*/
+        .label-default {
+            background: #D9D9D6;
+            color: #00396b;
+            border-radius: 15rem;
+            padding: .25rem .5rem;
+            border-radius: 15rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: .0625em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        /*Info blue type styling*/
+        .label-info {
+            background: #9BB8D3;
+            color: #FFFFFF;
+            border-radius: 15rem;
+            padding: .25rem .5rem;
+            border-radius: 15rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: .0625em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        /*Primary bright blue type styling*/
+        .label-primary {
+            background: #489FDF;
+            color: #FFFFFF;
+            border-radius: 15rem;
+            padding: .25rem .5rem;
+            border-radius: 15rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: .0625em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        /*Success green type styling*/
+        .label-success {
+            background: #40C1AC;
+            color: #FFFFFF;
+            border-radius: 15rem;
+            padding: .25rem .5rem;
+            border-radius: 15rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: .0625em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        /*Warning yellow type styling*/
+        .label-warning {
+            background: #E0A526;
+            color: #FFFFFF;
+            border-radius: 15rem;
+            padding: .25rem .5rem;
+            border-radius: 15rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: .0625em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        /*Danger red type styling*/
+        .label-danger {
+            background: #E5554F;
+            color: #FFFFFF;
+            border-radius: 15rem;
+            padding: .25rem .5rem;
+            border-radius: 15rem;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: .0625em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        /*Day styling in Calendar component*/
+        .day {
+            border-radius: 50% !important;
+            padding: 8px;
+        }
+
+        /* Modal header format*/
+        .modal-header {
+            border-bottom: 2px solid #d8dde6;
+        }
+
+        /* Modal footer format*/
+        .modal-footer {
+            text-align: right;
+            background-color: #f4f6f9;
+        }
+
+        /*Wrap for Multiselect containers*/
+        .multiselect-selected-text {
+            white-space: normal;
+        }
+        .multiselect-container > li > a {
+            white-space: normal;
+        }
+        input[type="text"]:disabled, input[type="search"]:disabled, textarea[disabled], select[disabled], .checkbox input[type="checkbox"]:disabled, 
+                .radio input[type="radio"]:disabled {
+            background: #FFFFFF !important;
+            background-color: #FFFFFF !important;
+            color: #848484 !important;
+            height: 30px
+            font-size: 11px;
+        }
+        input[type="text"], input[type="search"], textarea, select, .checkbox input[type="checkbox"], .radio input[type="radio"] {
+            background-color: #FFFFFF;
+            color: #000000;
+            border: 1px solid #d8dde6;
+            border-radius: 0.25rem;
+            width: 100%;
+            height: 30px !important;
+            font-size: 11px !important;
+        }
+         /*Placeholder*/
+        ::-webkit-input-placeholder {
+            font-size: 11px !important; 
+        }
+        ::-moz-placeholder {
+            font-size: 11px !important;
+        }
+        :-ms-input-placeholder {
+            font-size: 11px !important;
+        }
+        input:-moz-placeholder {
+            font-size: 11px !important;
+        }
+        
+        /*Custom Member Connect style*/
+        .fontSize10 {
+            font-size: 10px !important;
+        }
+        .fontSize14 {
+            font-size: 14px !important;
+        }
+        .fontSize18 {
+            font-size: 18px;
+        }
+        .hideSection {
+            display: none;
+        }
+        .boldFont {
+            font-weight: bold;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+    </style>
+</apex:component>

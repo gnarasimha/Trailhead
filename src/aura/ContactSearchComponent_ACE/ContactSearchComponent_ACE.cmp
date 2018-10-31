@@ -1,0 +1,45 @@
+<!--
+/**
+* Component to search Contacts
+* <p/><p/>
+* @author - Narasimha
+**/
+-->
+<aura:component controller="ContactSearchControllerLt_ACE" implements="force:appHostable,flexipage:availableForAllPageTypes"  access='global' >
+    
+    <!--Handler-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!--Attributes -->
+    <aura:attribute name="lstContactResult" type="List" description="use for store and display Contact list return from server"/>
+    <aura:attribute name="strFirstName" type="String" description="use for store user search input"/>
+    <aura:attribute name="strLastName" type="String" description="use for store user search input"/>    
+    <aura:attribute name="infoMessage"   type="boolean" default="false" description="use for display no record found message"/>
+    <aura:attribute name="objId" type="Id"/>
+    
+    <!-- Div element to Enter search text and button to search  -->
+    <div class="slds-m-around--large">
+        <form class="slds-form--inline">
+            <div class="slds-form-element">
+                <!-- Input enter FirstName. -->
+                <div class="slds-form-element__control">
+                    <ui:inputText aura:id="FirstName" label="{!$Label.c.ContactSearchComponent_FirstName}"  class="slds-input" value="{!v.strFirstName}" required="false" placeholder="Type here..."/>
+                </div>
+                <!-- Input enter LastName. -->
+                <div class="slds-form-element__control">
+                    <ui:inputText aura:id="LastName"  label="{!$Label.c.ContactSearchComponent_LastName}" class="slds-input" value="{!v.strLastName}" required="true" placeholder="Type here..."/>
+                </div>
+            </div>
+            <!-- Button to search for contacts based on FirstName and LastName -->
+            <lightning:button type="button" aura:id="SearchBtn" onclick="{!c.SearchContact}" class="slds-button slds-button--brand" label="{!$Label.c.ContactSearchComponent_Search}"/>
+            <!-- Button to create new contact -->
+            <lightning:button type="button" aura:id="CreateBtn" onclick="{!c.CreateContact}" class="slds-button slds-button--brand" label="{!$Label.c.ContactSearchComponent_CreateNew}"/>
+        </form>
+        <br/>
+        
+       <!-- Iterate over the result lists and display the contact card -->
+        <aura:iteration items="{!v.lstContactResult}" var="ContactWrapper">
+            <c:ContactSearchResultsCmp strFirstName = "{!ContactWrapper.objcontact.FirstName}" strLastName="{!ContactWrapper.objcontact.LastName}" strAdditionalInfo="{!ContactWrapper.strAdditionalInfo}" title="{!ContactWrapper.objcontact.Name}"/>    
+        </aura:iteration> 
+    </div>
+</aura:component>

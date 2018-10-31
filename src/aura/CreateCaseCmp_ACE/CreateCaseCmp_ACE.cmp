@@ -1,0 +1,44 @@
+<aura:component controller="NewCaseController_ACE" implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" >
+    <aura:attribute name="strStatus" type="string" description="Store case status"/>
+    <aura:attribute name="strOrigin" type="string" description="store case origin"/>
+    <aura:attribute name="strComment" type="string" description="store case comments"/>
+    
+    <aura:registerEvent name="appEvent" type="c:newCaseEvt_ACE"/>    
+    
+    
+    <div class="slds-m-around--large slds-theme_default slds-p-around_medium" >
+        
+        <div class="slds-media">
+            <div class="slds-media__body">
+                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Create New Case">Create New Case</h1>
+                   
+            </div>
+        </div>
+        
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-p-horizontal_medium">
+                <lightning:select aura:id="StatusContainer" name="Status" label="Status" required="true" value="{!v.strStatus}" messageWhenValueMissing="Status cannot be blank">
+                    <option value="">None</option>
+                    <option value="New">New</option>
+                    <option value="Escalated">Escalated</option>
+                    <option value="Closed">Closed</option>
+                </lightning:select>
+            </div>
+            <div class="slds-col slds-p-horizontal_medium">
+                <lightning:select aura:id="OriginContainer" name="Origin" label="Origin" required="true" value="{!v.strOrigin}" messageWhenValueMissing="Origin cannot be blank">
+                    <option value="">None</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Email">Email</option>
+                    <option value="Web">Web</option>
+                </lightning:select>
+            </div>
+        </div>
+        <div class="slds-size_2-of-2">
+            <lightning:textarea aura:id="caseCommentContainer"  label="Comments" required="true" messageWhenValueMissing="Comments cannot be blank" minlength="3" />   
+        </div>
+        <div class="slds-align_absolute-center">
+            <lightning:button type="button" aura:id="createBtn" onclick="{!c.createNewCase}" class="slds-button slds-button--brand">Create Case</lightning:button> 
+            <lightning:button type="button" aura:id="clearBtn" onclick="{!c.ClearFields}" class="slds-button slds-button--brand">Clear</lightning:button>
+        </div>
+    </div>
+</aura:component>

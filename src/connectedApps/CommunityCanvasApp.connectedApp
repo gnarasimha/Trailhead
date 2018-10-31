@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canvasConfig>
+        <accessMethod>Post</accessMethod>
+        <canvasUrl>https://communitycanvasapp.herokuapp.com/canvas</canvasUrl>
+        <locations>Chatter</locations>
+        <locations>Visualforce</locations>
+        <locations>Aura</locations>
+        <locations>ChatterFeed</locations>
+        <locations>OpenCTI</locations>
+        <locations>PageLayout</locations>
+        <samlInitiationMethod>None</samlInitiationMethod>
+    </canvasConfig>
+    <contactEmail>ngundurao@deloitte.com</contactEmail>
+    <iconUrl>https://communitycanvasapp.herokuapp.com/icon.png</iconUrl>
+    <infoUrl>https://communitycanvasapp.herokuapp.com/welcome.jsp</infoUrl>
+    <label>CommunityCanvasApp</label>
+    <logoUrl>https://communitycanvasapp.herokuapp.com/logo.png</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://communitycanvasapp.herokuapp.com/callback</callbackUrl>
+        <consumerKey>3MVG9d8..z.hDcPKVULdObDetjyEEB.7SrHfAuA0gOLBQLvJ.DtelYOrnT4MtkD0ir0leLSxTqVpnTn0PRAON</consumerKey>
+        <scopes>Basic</scopes>
+        <scopes>Chatter</scopes>
+    </oauthConfig>
+</ConnectedApp>

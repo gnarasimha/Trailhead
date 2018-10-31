@@ -1,0 +1,130 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes"  access='global'>
+    <div class="slds-box example-box">
+        <h2 class="slds-text-heading_small slds-m-bottom_xx-small">Filters</h2>
+        <form class="slds-form--inline">  
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="name">Submitted By</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="name" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="email">Object</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="email" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="email">Operation</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="email" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="email">Job Type</label>
+                <div class="slds-form-element__control">
+                    <input type="text" id="email" class="slds-input" />
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <button type="button" class="slds-button slds-button--brand">Get Jobs</button>
+            </div>
+        </form> 
+    </div>
+    
+    <div class="slds">
+        <table class="slds-table slds-table--bordered">    	
+            <thead>
+                <tr class="slds-text-heading--label">    
+                    <td>                
+                        <th class="slds-text-heading--label"> <lightning:input type="checkbox" name="input1"/> </th> 
+                        </td>
+                    
+                        <td>                
+                        <th class="slds-text-heading--label"> Job Id </th> 
+                        </td>
+                    <td>
+                    <th class="slds-text-heading--label"> Submitted By  </th>
+                    </td>
+                    
+                    <td>
+                    <th class="slds-text-heading--label"> Start Time </th>
+                    </td>
+                    
+                    <td>
+                    <th class="slds-text-heading--label">End Time </th>
+                    </td>
+                    
+                    <td>
+                    <th class="slds-text-heading--label">Status </th>
+                    </td>
+                    
+                    <td>
+                    <th class="slds-text-heading--label">Job Type </th>
+                    </td>
+                    
+                     <td>
+                    <th class="slds-text-heading--label">Operation </th>
+                    </td>
+                    
+                     <td>
+                    <th class="slds-text-heading--label">Object </th>
+                    </td>	
+                    
+                     <td>
+                    <th class="slds-text-heading--label">Progress </th>
+                    </td>	
+                </tr>        	 
+            </thead>
+            <tbody>
+                <tr class="slds-hint-parent">
+                <td> 
+                <th>   
+                <lightning:input type="checkbox" name="input1"/>
+                </th>        
+                    </td>
+                    <td><th>750700000Pj87i</th></td>
+                    <td><th>Dbamp User</th></td>
+                    <td><th>10/22/2018 11:17 AM</th></td>
+                    <td><th>10/22/2018 11:17 AM</th></td>
+                    <td><th>Closed</th></td>
+                    <td><th>Bulk V1</th></td>
+                    <td><th>Insert</th></td>
+                    <td><th>Contact</th></td>
+                    <td></td>
+                </tr>
+                <tr class="slds-hint-parent">
+                <td> 
+                <th>   
+                <lightning:input type="checkbox" name="input1"/>
+                </th>        
+                    </td>
+                    <td><th>750500000Pj87p</th></td>
+                    <td><th>Dbamp User</th></td>
+                    <td><th>10/23/2018 11:17 AM</th></td>
+                    <td><th>10/24/2018 11:17 AM</th></td>
+                    <td><th>Closed</th></td>
+                    <td><th>Bulk V1</th></td>
+                    <td><th>Update</th></td>
+                    <td><th>Contact</th></td>
+                    <td></td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+        <div class="slds-box example-box">
+            <form class="slds-form--inline"> 
+            <div class="slds-form-element">
+             <button type="button" class="slds-button slds-button--brand">Select All</button>
+            </div>   
+         <div class="slds-form-element">
+             <button type="button" class="slds-button slds-button--brand">Abort/Close</button>
+            </div>
+                <div class="slds-form-element">
+             <button type="button" class="slds-button slds-button--brand">Delete</button>
+            </div>
+            </form>
+        </div>
+        </div>
+</aura:component>

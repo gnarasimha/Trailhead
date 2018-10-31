@@ -1,0 +1,30 @@
+<!--
+/**
+* Component to display contact search results.
+* <p/><p/>
+* @author - Narasimha
+**/
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes"  access='global'>
+    
+    <!--Attributes -->
+    <aura:attribute name="title" type="String" default="Contact Details"/>
+    <aura:attribute name="strAdditionalInfo" type="String"/>
+    <aura:attribute name="strFirstName" type="String" description="use for store user search input"/>
+    <aura:attribute name="strLastName" type="String" description="use for store user search input"/>
+    
+    <!--Lightning card to display contact details -->
+    <lightning:card>
+        <aura:set attribute="title">
+            <img src="{!$Resource.ContactIcon}"/>
+            {!v.title }
+        </aura:set>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_4-of-6 slds-large-size_9-of-12">
+        FirstName        : <ui:outputText value="{!v.strFirstName}"/>
+            <br></br>    
+        LastName         : <ui:outputText value="{!v.strLastName}"/>
+            <br></br>
+        Additional Info  : <ui:outputText value="{!v.strAdditionalInfo}"/>
+    </div>
+    </lightning:card>
+</aura:component>

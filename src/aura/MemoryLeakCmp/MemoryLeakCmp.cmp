@@ -1,0 +1,10 @@
+<aura:component > 
+    <aura:attribute name="root" type="Object[]" /> 
+    <lightning:button label="Populate List" onclick="{!c.handleClickPopulate}"/> 
+    <lightning:button label="Clear List" onclick="{!c.handleClickClear}"/> 
+    <aura:iteration items="{!v.root}" var="branch"> 
+        <aura:iteration items="{!branch}" var="leaf"> 
+            <div aura:id="endnode">{!leaf}</div> 
+        </aura:iteration> 
+    </aura:iteration> 
+</aura:component>

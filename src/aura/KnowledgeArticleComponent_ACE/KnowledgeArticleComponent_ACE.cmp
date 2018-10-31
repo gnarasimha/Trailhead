@@ -1,0 +1,55 @@
+<!--
+/**
+* Component to display related Knowledge articles.
+* <p/><p/>
+* @author - Narasimha
+**/
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" controller="NewCaseController_ACE">
+    
+    <!--Attributes -->
+    <aura:attribute name="lstArticles" type="List" />
+    <aura:attribute name="boolMessage" type="boolean"/>
+    
+    <!--Handler -->
+    <aura:handler event="c:newCaseEvt_ACE" action="{!c.displayRelatedArticles}"/>
+    
+    <!--Header -->
+    <div class="slds-m-around--large slds-theme_default slds-p-around_medium" >
+        <div class="slds-media">
+            <div class="slds-media__body">
+                <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Related Articles">Related
+                    Articles</h1>
+            </div>
+        </div>
+        
+        <!--Table to display list of articles. -->
+        <table class="slds-table slds-table--bordered slds-table--cell-buffer" aura:id="Table">
+            <thead>
+                <tr class="slds-text-title--caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="First Name">Article</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Last Name">Title</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:if isTrue="{!v.boolMessage}">
+                    <div class="slds-text-color--error"> No Articles Found</div>
+                </aura:if>
+                <aura:iteration items="{!v.lstArticles}" var="ArticleWrapper">
+                    <tr> 
+                        <td>
+                            <h1 class="slds-text-link" id="{!ArticleWrapper.strArticleId}" onclick="{!c.ArticleUrl}" >Link to Article</h1>
+                        </td>
+                        <td>
+                            <div class="slds-truncate">{!ArticleWrapper.strArticleTitle}</div>
+                        </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

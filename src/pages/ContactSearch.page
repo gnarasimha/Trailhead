@@ -1,0 +1,159 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" showChat="false" controller="ContactSearchController_ACE">
+    <c:FrameworkBaseComponent_CF boolCFBaseStyle="true"  boolCFDataTables="true" boolCFCharts="true" boolCFInputFiles="true" boolCFMultiSelects="true"
+                                 boolCFStyle="true" boolCFWizards="true" boolCFLightningAssets="true" boolCFValidations="true" />  
+    <div id="snackbar">Contact Created</div>
+    <style>
+        #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #008000;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+        }
+        
+        #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        
+        @-webkit-keyframes fadein {
+        from {bottom: 0; opacity: 0;} 
+        to {bottom: 30px; opacity: 1;}
+        }
+        
+        @keyframes fadein {
+        from {bottom: 0; opacity: 0;}
+        to {bottom: 30px; opacity: 1;}
+        }
+        
+        @-webkit-keyframes fadeout {
+        from {bottom: 30px; opacity: 1;} 
+        to {bottom: 0; opacity: 0;}
+        }
+        
+        @keyframes fadeout {
+        from {bottom: 30px; opacity: 1;}
+        to {bottom: 0; opacity: 0;}
+        }
+    </style>
+    <!-- Form to take input from user -->
+    <apex:form >
+        <script>
+        //Show toast
+        function ShowToast() {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        
+        //Call function to create new contact.
+        function CreateNewCon()
+        {
+            
+            createContact(document.getElementById("FirstName").value,
+                          document.getElementById("LastName").value);
+            
+        }
+        
+        //Call function to search contacts.
+        function searchCon()
+        {
+            
+            if(validateFields("#LastName")){
+                SearchContact(document.getElementById("FirstName").value,
+                              document.getElementById("LastName").value);
+            }
+            
+        }
+        
+        //Function to add class on rerender of components.
+        function AddClass()
+        {
+            
+            $('.dataTable-full').attr("width", "100%").dataTable();
+        }
+        </script> 
+        
+        <apex:pageBlock >
+            
+            <!-- Action function for calling actions related to search and create contacts -->
+            <apex:actionfunction name="createContact" action="{!createCon}" oncomplete="ShowToast()">
+                <apex:param name="FirstName" value=""/>
+                <apex:param name="LastName" value=""/>    
+            </apex:actionfunction>
+            <apex:actionfunction name="SearchContact" action="{!searchContacts}"  rerender="opId,buttonsBlock" onComplete="AddClass()">
+                <apex:param name="FirstName" value=""/>
+                <apex:param name="LastName" value=""/>    
+            </apex:actionfunction>
+            
+            <!-- Input for FirstName and LastName -->
+            <div class="panel-body">    
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label >{!$Label.ContactSearchComponent_FirstName}</label>
+                            <input type="text" id="FirstName"/>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label >{!$Label.ContactSearchComponent_LastName}</label>
+                            <input type="text"  id="LastName" validate-required="true" validate-required-alert-type="4" validate-required-error-message="Required field." validation-activated="true" validation-inline-message="true" />
+                        </div>
+                    </div>
+                    <!-- Buttons for searching and creating contacts -->
+                    <apex:pageBlock id="buttonsBlock">
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <br/><br/>
+                                <apex:commandButton styleClass="btn btn-primary btn-lg" onclick="searchCon()" value="{!$Label.ContactSearchComponent_Search}" onComplete="AddClass()"/>
+                            </div>
+                        </div>
+                        <div class="col-md-1" >
+                            <div class="form-group">
+                                <br/><br/>
+                                <apex:commandButton id="NewContact" styleClass="btn btn-primary btn-lg" onclick="CreateNewCon()"  value="{!$Label.ContactSearchComponent_CreateNew}"  rerender="buttonsBlock,opId" disabled="{!!boolSearched}" />
+                            </div>
+                        </div>
+                    </apex:pageBlock>
+                </div>
+            </div>
+        </apex:pageBlock>     
+    </apex:form>
+    <!-- Table to display search results -->
+    <apex:outputPanel id="opId">   
+        <div class="modal-body" id="Results">
+            <table class="display dataTable-full" id="TableId">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Link to Contact</th>
+                        <th>Additional Information</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!lstConWrapper}" var="ContactWrapper">
+                        <tr>
+                            <td> {!ContactWrapper.objcontact.Firstname}</td>
+                            <td> {!ContactWrapper.objcontact.LastName}</td>
+                            <td > 
+                                <apex:outputLink target="_blank" value="/{!ContactWrapper.objcontact.id}">{!ContactWrapper.objcontact.Name} </apex:outputLink>
+                            </td>
+                            <td>{!ContactWrapper.strAdditionalInfo} </td>    
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+        </div>
+    </apex:outputPanel>    
+</apex:page>

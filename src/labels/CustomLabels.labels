@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ContactSearchComponent_CreateNew</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ContactSearchComponent_CreateNew</shortDescription>
+        <value>Create New</value>
+    </labels>
+    <labels>
+        <fullName>ContactSearchComponent_FirstName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ContactSearchComponent_FirstName</shortDescription>
+        <value>First Name</value>
+    </labels>
+    <labels>
+        <fullName>ContactSearchComponent_LastName</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ContactSearchComponent_LastName</shortDescription>
+        <value>Last Name</value>
+    </labels>
+    <labels>
+        <fullName>ContactSearchComponent_Search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ContactSearchComponent_Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>DMLOperationsClass_CF_OperationCompleted_CF</fullName>
+        <categories>DML Operations Class CF Operation Completed CF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DML Operations Class CF Operation Completed CF</shortDescription>
+        <value>Operation completed.</value>
+    </labels>
+    <labels>
+        <fullName>ErrorLog_Class_CF_ExceptionContactAdministrator_CF</fullName>
+        <categories>Error Log Class CF Exception Contact Administrator CF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Log Class CF Exception Contact Administrator CF</shortDescription>
+        <value>An error has ocurred. Please contact your system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>ErrorLog_Class_CF_UnableToProcessException_CF</fullName>
+        <categories>Error Log Class CF Unable To Process Exception CF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Log Class CF Unable To Process Exception CF</shortDescription>
+        <value>Unable to process the Exception.</value>
+    </labels>
+    <labels>
+        <fullName>InputFilesComponent_InputFileDragDrop_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Input Files Component Input File Drag Drop</shortDescription>
+        <value>Drag and drop your file.</value>
+    </labels>
+    <labels>
+        <fullName>InputFilesComponent_InputFilesSizeLimit_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Input Files Component Input Files Size Limit</shortDescription>
+        <value>File &quot;{name}&quot; exceeds maximum allowed upload size.</value>
+    </labels>
+    <labels>
+        <fullName>Inventory_Level_Low</fullName>
+        <categories>constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inventory Level Low</shortDescription>
+        <value>Has a low inventory</value>
+    </labels>
+    <labels>
+        <fullName>Search</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ContactSearchComponent_Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>Select_One</fullName>
+        <categories>constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select One</shortDescription>
+        <value>Select one</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultDateTimeErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Date Time Error Message</shortDescription>
+        <value>Invalid date/time</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultErrorMessageValueValidation_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Error Message Value Validation</shortDescription>
+        <value>Value does not meet rule</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultMaximumLengthErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Maximum Length Error Message</shortDescription>
+        <value>The maximum length for this field is</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultMaximumValueErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Maximum Value Error Message</shortDescription>
+        <value>The maximum value for this field is</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultMinimumLengthErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Minimum Length Error Message</shortDescription>
+        <value>The minimum length for this field is</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultMinimumValueErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Minimum Value Error Message</shortDescription>
+        <value>The minimum value for this field is</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultRegexErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Regex Error Message</shortDescription>
+        <value>A different value is required.</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultRequiredFieldErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Required Field Error Message</shortDescription>
+        <value>This field is required.</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_DefaultSpecificValueErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Specific Value Error Message</shortDescription>
+        <value>This field data doesn&apos;t match with the required information</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_Default_Error_Message_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Default Error Message</shortDescription>
+        <value>Invalid field.</value>
+    </labels>
+    <labels>
+        <fullName>ValidationsComponent_InputFileTypeErrorMessage_CF</fullName>
+        <categories>Custom Framework</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validations Component Input File Type Error Message</shortDescription>
+        <value>Upload type has not been defined</value>
+    </labels>
+</CustomLabels>

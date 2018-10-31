@@ -1,0 +1,25 @@
+<apex:page >
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script  src="https://www.googletagmanager.com/gtag/js?id=UA-127645537-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127645537-1');
+  ga('send', {
+                hitType: 'event',
+                eventCategory: 'Test Category',
+                eventAction: 'Track user by User Email',
+                eventLabel: 'User Email'
+            });
+</script>
+    <apex:canvasApp developerName="CommunityCanvasApp" 
+         height="1000px" width="800px" 
+        parameters="{p1:'value1',p2:'value2',p3:'value3'}"/>
+<script type='text/javascript' src='https://c.la1-c1-ukb.salesforceliveagent.com/content/g/js/44.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la1-c1-ukb.salesforceliveagent.com/chat', '5727F0000000QZG', '00D7F000001aNhM');
+</script>
+</apex:page>

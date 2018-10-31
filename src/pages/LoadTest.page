@@ -1,0 +1,16 @@
+<apex:page controller="FetchEmployeeDetails" action="{!getEmployeeDetails}">
+    <apex:pageBlock >
+        <apex:form >
+            <apex:pageBlockSection >
+                <apex:commandButton value="GetEMployeeDetails" action="{!getEmployeeDetails}" rerender="OutputPanelID"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <apex:outputPanel id="OutputPanelID">
+                    <p>
+                        {!strEmployeeDetails} 
+                    </p>  
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+        </apex:form>
+    </apex:pageBlock>   
+</apex:page>
