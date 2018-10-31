@@ -1,0 +1,60 @@
+<project name="ANT Jobs" basedir=".">
+	<!-- ========================================== -->
+	<!-- Deployment targets                         -->
+	<!-- ========================================== -->
+	<target name="sf_prepare_deployment">
+		<echo message="START: Create diff dir" />
+		<echo message="Checking against targer: ${target}" />
+		<mkdir dir="../${diffDir}" />
+		<mkdir dir="../${diffDir}/src" />
+		<exec executable="C:\Program Files\Git\bin\bash.exe" osfamily="windows" failonerror="true">
+			<arg value="${scriptName}.sh" />
+			<arg value="${target}" />
+			<arg value="${targetName}" />
+		</exec>
+		<exec executable="/bin/bash" osfamily="unix" failonerror="true">
+			<arg value="${scriptName}.sh" />
+			<arg value="${target}" />
+			<arg value="${targetName}" />
+		</exec>
+		<exec executable="C:\Program Files\Git\bin\bash.exe" osfamily="windows">
+			<arg value="create_changes.sh" />
+			<arg value="${diffDir}" />
+		</exec>
+
+		<exec executable="/bin/bash" osfamily="unix">
+			<arg value="create_changes.sh" />
+			<arg value="${diffDir}" />
+		</exec>
+		<echo message="Generating package.xml" />
+
+		<exec executable="C:\Program Files\Git\bin\bash.exe" osfamily="windows">
+			<arg value="generate_package.sh" />
+			<arg value="../final.txt" />
+			<arg value="package" />
+			<arg value="../${diffDir}/src" />
+		</exec>
+
+		<exec executable="/bin/bash" osfamily="unix">
+			<arg value="generate_package_unix.sh" />
+			<arg value="../final.txt" />
+			<arg value="package" />
+			<arg value="../${diffDir}/src" />
+		</exec>
+		<echo message="Package generated." />
+		<echo message="Adding properties if applicable" />
+
+		<exec executable="C:\Program Files\Git\bin\bash.exe" osfamily="windows">
+			<arg value="properties_helper.sh" />
+			<arg value="${propsEnv}" />
+			<arg value="../${diffDir}/src" />
+		</exec>
+
+		<exec executable="/bin/bash" osfamily="unix">
+			<arg value="properties_helper.sh" />
+			<arg value="${propsEnv}" />
+			<arg value="../${diffDir}/src" />
+		</exec>
+		<echo message="Properties added. Finished." />
+	</target>
+</project>
